@@ -14,6 +14,9 @@ def get_synonyms(word):
 
 def calculate_score(reference_keywords, candidate_keywords):
 
+    if not reference_keywords:
+        return 0
+
     matched = 0
 
     candidate_set = set(candidate_keywords)
